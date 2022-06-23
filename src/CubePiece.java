@@ -1,4 +1,6 @@
-public enum CubePiece {
+import java.util.function.BiFunction;
+
+public enum CubePiece implements BiFunction<CubePiece,Integer,Integer> {
     B(Type.CENTER,28),
     G(Type.CENTER,22),
     O(Type.CENTER,31),
@@ -26,6 +28,7 @@ public enum CubePiece {
     YRB(Type.CORNER,47),
     YRG(Type.CORNER,45);
 
+
     private Type t;
     private final int p;
 
@@ -42,9 +45,27 @@ public enum CubePiece {
         return p;
     }
 
+    @Override
+    public Integer apply(CubePiece cubePiece, Integer integer) {
+        return null;
+    }
+
+//    @Override
+//    public Integer apply(CubePiece cubePiece, Integer integer) {
+//        return switch(t) {
+//            case CENTER -> integer;
+//            case EDGE -> 0;
+//            case CORNER -> 5;
+//        };
+//    }
+
     public enum Type {
         CENTER,
         EDGE,
         CORNER;
+
+
     }
+
+
 }
