@@ -61,9 +61,12 @@ public enum Point {
 
     private final PieceType pieceType;
 
+
     Point(PieceType pieceType) {
         this.pieceType = pieceType;
     }
+
+
 
     public PieceType getPieceType() {
         return pieceType;
