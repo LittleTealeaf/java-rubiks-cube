@@ -1,37 +1,34 @@
 package simulator;
 
-import java.time.Period;
-import java.util.stream.Stream;
-
 public enum Move {
-    R(MovePermutation.R),
-    RP(MovePermutation.R, true),
-    U(MovePermutation.U),
-    UP(MovePermutation.U, true),
-    L(MovePermutation.L),
-    LP(MovePermutation.L, true),
-    B(MovePermutation.B),
-    BP(MovePermutation.B, true),
-    D(MovePermutation.D),
-    DP(MovePermutation.D, true),
-    F(MovePermutation.F),
-    FP(MovePermutation.F, true),
-    X(MovePermutation.X),
-    XP(MovePermutation.X,true),
-    Y(MovePermutation.Y),
-    YP(MovePermutation.Y,true),
-    Z(MovePermutation.Z),
-    ZP(MovePermutation.Z,true);
+    R(Permutation.R),
+    RP(Permutation.R, true),
+    U(Permutation.U),
+    UP(Permutation.U, true),
+    L(Permutation.L),
+    LP(Permutation.L, true),
+    B(Permutation.B),
+    BP(Permutation.B, true),
+    D(Permutation.D),
+    DP(Permutation.D, true),
+    F(Permutation.F),
+    FP(Permutation.F, true),
+    X(Permutation.X),
+    XP(Permutation.X, true),
+    Y(Permutation.Y),
+    YP(Permutation.Y, true),
+    Z(Permutation.Z),
+    ZP(Permutation.Z, true);
 
     //    private final MovePermutation permutation;
     private final Point[][] perms;
     private final boolean isReverse;
 
-    Move(MovePermutation permutation) {
+    Move(Permutation permutation) {
         this(permutation, false);
     }
 
-    Move(MovePermutation permutation, boolean isReverse) {
+    Move(Permutation permutation, boolean isReverse) {
         this.perms = permutation.getPermutations();
         this.isReverse = isReverse;
     }

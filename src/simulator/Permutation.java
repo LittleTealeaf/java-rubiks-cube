@@ -1,6 +1,6 @@
 package simulator;
 
-public enum MovePermutation {
+public enum Permutation {
     B(perm(Point.YO, Point.YG, Point.YR, Point.YB), perm(Point.OY, Point.GY, Point.RY, Point.BY), perm(Point.YOG, Point.YRG, Point.YRB, Point.YOB),
       perm(Point.BYO, Point.OYG, Point.GYR, Point.RYB), perm(Point.RYG, Point.BYR, Point.OYB, Point.GYO)
     ),
@@ -25,7 +25,7 @@ public enum MovePermutation {
 
     private final Point[][] permutations;
 
-    MovePermutation(Point[]... permutations) {
+    Permutation(Point[]... permutations) {
         this.permutations = permutations;
     }
 

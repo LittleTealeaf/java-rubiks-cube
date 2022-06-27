@@ -13,32 +13,32 @@ package simulator;
  * n+5, n+6, n+7, n+8 = most to least significant corner
  */
 public enum Piece {
-    WRB(Point.WRB),
-    WRG(Point.WRG),
-    WOB(Point.WOB),
-    WOG(Point.WOG),
-    WB(Point.WB),
-    WO(Point.WO),
-    WG(Point.WG),
-    WR(Point.WR),
-    W(Point.W),
-    YRB(Point.YRB),
-    YRG(Point.YRG),
-    YOB(Point.YRB),
-    YOG(Point.YOG),
-    YB(Point.YB),
-    YO(Point.YO),
-    YG(Point.YG),
-    YR(Point.YR),
-    Y(Point.Y),
-    O(Point.O),
-    OG(Point.OG),
+    B(Point.B),
     G(Point.G),
-    RG(Point.RG),
+    O(Point.O),
+    OB(Point.OB),
+    OG(Point.OG),
     R(Point.R),
     RB(Point.RB),
-    B(Point.B),
-    OB(Point.OB),
+    RG(Point.RG),
+    W(Point.W),
+    WB(Point.WB),
+    WG(Point.WG),
+    WO(Point.WO),
+    WOB(Point.WOB),
+    WOG(Point.WOG),
+    WR(Point.WR),
+    WRB(Point.WRB),
+    WRG(Point.WRG),
+    Y(Point.Y),
+    YB(Point.YB),
+    YG(Point.YG),
+    YO(Point.YO),
+    YOB(Point.YOB),
+    YOG(Point.YOG),
+    YR(Point.YR),
+    YRB(Point.YRB),
+    YRG(Point.YRG)
     ;
 
     private Point point;
@@ -47,5 +47,7 @@ public enum Piece {
         this.point = point;
     }
 
-
+    public Point point() {
+        return point;
+    }
 }
