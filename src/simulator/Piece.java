@@ -24,7 +24,21 @@ public enum Piece {
     W(Point.W),
     YRB(Point.YRB),
     YRG(Point.YRG),
-    //FINISH
+    YOB(Point.YRB),
+    YOG(Point.YOG),
+    YB(Point.YB),
+    YO(Point.YO),
+    YG(Point.YG),
+    YR(Point.YR),
+    Y(Point.Y),
+    O(Point.O),
+    OG(Point.OG),
+    G(Point.G),
+    RG(Point.RG),
+    R(Point.R),
+    RB(Point.RB),
+    B(Point.B),
+    OB(Point.OB),
     ;
 
     private Point point;
