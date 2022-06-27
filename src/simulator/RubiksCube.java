@@ -14,11 +14,11 @@ public class RubiksCube {
         Stream.of(Piece.values()).parallel().forEach(piece -> state.put(piece, piece.point()));
     }
     public void move(Move... moves) {
-        Arrays.stream(moves).forEach(move -> {
+        for(Move move : moves) {
             state.keySet().parallelStream().forEach(piece -> {
-                state.compute(piece, (piece1, point) -> move.apply(point));
+                state.put(piece,move.apply(piece.point()));
             });
-        });
+        }
     }
 
     @Override

@@ -5,8 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         RubiksCube rubiksCube = new RubiksCube();
-        rubiksCube.move(Move.U);
-        rubiksCube.move(Move.UP);
+        rubiksCube.move(Move.R,Move.U,Move.RP,Move.UP);
 
         System.out.println(rubiksCube.toString());
 
